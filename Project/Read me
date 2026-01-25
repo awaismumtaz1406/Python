@@ -1,230 +1,103 @@
-# 🏋️ Awais Fitness Coaching – Python Console Application
+📌 Project Overview
 
-A comprehensive **Python-based fitness coaching system** that interacts with users through the console and provides personalized guidance on **nutrition, workouts, calories, hydration, heart rate, recovery, and overall fitness lifestyle**.
+Awais Fitness Coaching is designed to help beginners and fitness enthusiasts by offering:
 
-This project is designed for **beginners, gym-goers, and fitness enthusiasts** who want structured fitness knowledge and guidance in one place.
+Fitness education (bulking, cutting, muscle gain)
 
----
+Budget-friendly diet plans
 
-## 📌 Project Overview
+Calorie requirement calculator
 
-**Awais Fitness Coaching** is an interactive console application built using Python.  
-It simulates a **virtual fitness coach** that:
+Structured workout routines
 
-- Educates users about fitness terms
-- Suggests diet plans based on goals
-- Calculates calorie requirements
-- Provides workout plans (normal & disabled users)
-- Tracks hydration, sleep, steps, heart rate
-- Shares injury prevention tips
-- Answers common beginner fitness FAQs
+Health monitoring (heart rate, hydration, sleep, steps)
 
-This project is ideal for:
-- Python beginners practicing conditional logic & loops  
-- Fitness enthusiasts building educational tools  
-- Students creating console-based health applications  
+Injury prevention tips
 
----
+Beginner fitness FAQs
 
-## 🧠 Key Features
+Inclusive workouts for disabled users
 
-### 🏁 Introduction & Fitness Education
-- Explains **bulking, cutting, muscle gain**
-- Educates users on **breathing techniques (IAP)**
-- Explains **diet plans and calories**
+The project originally started as a console-based application and was later converted into a GUI-based desktop app for better usability and user experience.
 
----
+🖥️ GUI Features
 
-### 🥗 Diet Planning System
-Based on user goal:
-1. **Weight Gain**
-2. **Weight Loss**
-3. **Muscle Gain / Shape**
+🎯 User-friendly interface (Tkinter)
 
-Each plan includes:
-- Budget-friendly food lists
-- Macro-focused suggestions
+🧠 Fitness terms & education
 
----
+🥗 Weight gain / loss / muscle gain diet plans
 
-### 🔥 Calories & Nutrition Analysis
-- Shows calorie & protein charts for:
-  - Bulking foods
-  - Cutting foods
-  - Muscle-gain foods
-- Calculates **daily calorie needs** using:
+🔢 Daily calorie calculator
 
-BMR = 10 × weight + 6.25 × height − 5 × age − 161
+🏋️‍♂️ Full workout plans (6-day split)
 
+🫀 Heartbeat & health status evaluation
 
----
+💧 Hydration & sleep analysis
 
-### ⚖️ Weight Status Check
-- Underweight
-- Normal / Moderate
-- Overweight
+🤕 Injury prevention tips
 
----
+❓ 100+ beginner fitness FAQs
 
-### 🏋️ Workout Plans
-#### ✅ Normal Users
-- 6-Day split:
-- Chest
-- Back
-- Shoulders
-- Arms
-- Legs
-- Abs
+♿ Special workout plans for disabled users
 
-#### ♿ Disabled / Special Users
-- Lower body disability
-- Upper body disability
-- Limited mobility
-- One-sided disability
-- Back injury
+📊 Scrollable output panel for clean display
 
-All workouts are **safe and adaptive**.
+🛠️ Technologies Used
 
----
+Python 3
 
-### 🏗️ Gym Machine Guide
-Explains proper usage of:
-- Chest Press
-- Lat Pulldown
-- Smith Machine
-- Leg Press
-- Pec Deck
-- Abductor / Adductor
-- Assisted Pull-ups
-- Core machines
+Tkinter (GUI framework)
 
----
+Standard Python libraries only (no external dependencies)
 
-### 👨‍🏫 Personal Trainer Availability
-Allows user to choose trainers based on time slots:
-- Morning
-- Afternoon
-- Evening
-- Night
+📂 Project Structure
+awais-fitness-coaching/
+│
+├── awais_fitness_gui.py
+├── README.md
 
----
-
-### 📊 Lifestyle & Health Tracking
-- Gym consistency (weekly attendance)
-- Daily water intake
-- Heart rate (BPM calculation)
-- Sleep quality analysis
-- Daily step count analysis
-- Body fat percentage estimator
-
----
-
-### 🛡️ Injury Prevention Tips
-Includes guidance on:
-- Warm-ups
-- Proper technique
-- Progressive overload
-- Recovery & rest
-- Listening to body signals
-
----
-
-### ❓ Fitness FAQs (Beginner Friendly)
-Covers:
-- Getting started
-- Weight loss
-- Strength training
-- Cardio
-- Nutrition
-- Supplements
-- Recovery
-- Equipment
-- Mindset
-- Goal-specific questions
-
-Over **100+ FAQs** included.
-
----
-
-## 🛠️ Technologies Used
-
-- **Python 3**
-- Core concepts:
-- Variables
-- Conditionals
-- Loops
-- Dictionaries
-- Lists
-- User input handling
-
-No external libraries required.
-
----
-
-## ▶️ How to Run the Project
-
-### 1️⃣ Clone the Repository
-```bash
+▶️ How to Run the Project
+1️⃣ Clone the Repository
 git clone https://github.com/your-username/awais-fitness-coaching.git
 
 2️⃣ Navigate to the Project Folder
 cd awais-fitness-coaching
 
-3️⃣ Run the Program
-python main.py
+3️⃣ Run the Application
+python awais_fitness_gui.py
 
-📂 Project Structure
-Awais-Fitness-Coaching/
-│
-├── main.py        # Complete fitness coaching program
-└── README.md      # Project documentation
 
-🎯 Who This Project Is For
+✅ Make sure Python 3 is installed on your system.
 
-Python beginners
+🧮 Calorie Calculation Formula
 
-Fitness trainers building digital tools
+The app uses the Mifflin-St Jeor Equation:
 
-Students working on console projects
+Calories = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161
 
-Anyone interested in fitness education through programming
 
-🚀 Future Improvements
-
-BMI calculator
-
-Graphical User Interface (GUI)
-
-Database for user history
-
-Personalized meal macros
-
-Mobile or web version
-
-AI-based workout recommendations
+This estimates minimum daily calorie needs.
 
 ⚠️ Disclaimer
 
-This application is educational only.
-Always consult a certified fitness trainer or medical professional before making major health decisions.
+This application is for educational and general fitness guidance only.
 
-📄 License
+It does not replace professional medical or fitness advice.
 
-This project is open-source and free to use for learning purposes.
+Always consult a doctor or certified trainer for medical conditions.
 
-👤 Author
+🚀 Future Enhancements
 
-Awais Mumtaz
-Fitness Enthusiast & Python Developer
+🔥 Modern UI (CustomTkinter / PyQt)
 
-⭐ If you like this project, don’t forget to star the repository!
+📱 Mobile-friendly version
 
+💾 Save user profiles
 
----
+📈 Progress tracking graphs
 
-If you want, I can also:
-- 🔹 **Clean and refactor the Python code**
-- 🔹 **Split it into modules**
-- 🔹 **Create a GUI version**
-- 🔹 **Shorten or simplify the README**
+📦 Convert to .exe desktop application
 
+🌐 Web-based version
