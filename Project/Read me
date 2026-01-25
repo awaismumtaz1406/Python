@@ -54,3 +54,177 @@ Each plan includes:
   - Muscle-gain foods
 - Calculates **daily calorie needs** using:
 
+BMR = 10 × weight + 6.25 × height − 5 × age − 161
+
+
+---
+
+### ⚖️ Weight Status Check
+- Underweight
+- Normal / Moderate
+- Overweight
+
+---
+
+### 🏋️ Workout Plans
+#### ✅ Normal Users
+- 6-Day split:
+- Chest
+- Back
+- Shoulders
+- Arms
+- Legs
+- Abs
+
+#### ♿ Disabled / Special Users
+- Lower body disability
+- Upper body disability
+- Limited mobility
+- One-sided disability
+- Back injury
+
+All workouts are **safe and adaptive**.
+
+---
+
+### 🏗️ Gym Machine Guide
+Explains proper usage of:
+- Chest Press
+- Lat Pulldown
+- Smith Machine
+- Leg Press
+- Pec Deck
+- Abductor / Adductor
+- Assisted Pull-ups
+- Core machines
+
+---
+
+### 👨‍🏫 Personal Trainer Availability
+Allows user to choose trainers based on time slots:
+- Morning
+- Afternoon
+- Evening
+- Night
+
+---
+
+### 📊 Lifestyle & Health Tracking
+- Gym consistency (weekly attendance)
+- Daily water intake
+- Heart rate (BPM calculation)
+- Sleep quality analysis
+- Daily step count analysis
+- Body fat percentage estimator
+
+---
+
+### 🛡️ Injury Prevention Tips
+Includes guidance on:
+- Warm-ups
+- Proper technique
+- Progressive overload
+- Recovery & rest
+- Listening to body signals
+
+---
+
+### ❓ Fitness FAQs (Beginner Friendly)
+Covers:
+- Getting started
+- Weight loss
+- Strength training
+- Cardio
+- Nutrition
+- Supplements
+- Recovery
+- Equipment
+- Mindset
+- Goal-specific questions
+
+Over **100+ FAQs** included.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python 3**
+- Core concepts:
+- Variables
+- Conditionals
+- Loops
+- Dictionaries
+- Lists
+- User input handling
+
+No external libraries required.
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/awais-fitness-coaching.git
+
+2️⃣ Navigate to the Project Folder
+cd awais-fitness-coaching
+
+3️⃣ Run the Program
+python main.py
+
+📂 Project Structure
+Awais-Fitness-Coaching/
+│
+├── main.py        # Complete fitness coaching program
+└── README.md      # Project documentation
+
+🎯 Who This Project Is For
+
+Python beginners
+
+Fitness trainers building digital tools
+
+Students working on console projects
+
+Anyone interested in fitness education through programming
+
+🚀 Future Improvements
+
+BMI calculator
+
+Graphical User Interface (GUI)
+
+Database for user history
+
+Personalized meal macros
+
+Mobile or web version
+
+AI-based workout recommendations
+
+⚠️ Disclaimer
+
+This application is educational only.
+Always consult a certified fitness trainer or medical professional before making major health decisions.
+
+📄 License
+
+This project is open-source and free to use for learning purposes.
+
+👤 Author
+
+Awais Mumtaz
+Fitness Enthusiast & Python Developer
+
+⭐ If you like this project, don’t forget to star the repository!
+
+
+---
+
+If you want, I can also:
+- 🔹 **Clean and refactor the Python code**
+- 🔹 **Split it into modules**
+- 🔹 **Create a GUI version**
+- 🔹 **Shorten or simplify the README**
+
