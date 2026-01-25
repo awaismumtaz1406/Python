@@ -1,395 +1,110 @@
-# intro 
+import tkinter as tk
+from tkinter import messagebox, scrolledtext
 
-print("\n\t\t\t\t\t\t\ Welcome to Awais Fitness Coaching \n\n\n")
-[]
-# Defining terms to customers 
+# ---------- Main Window ----------
+root = tk.Tk()
+root.title("Awais Fitness Coaching")
+root.geometry("900x600")
+root.config(bg="#1e1e1e")
 
-choice = input("Enter something for terms to define for you (yes or no ) :\n")
-if choice.lower() == "yes" :
-    print("Bulking ?\n")
-    print('''Bulking is a nutrition and training phase focused on gaining muscle mass by consuming more calories than the body burns while following a structured strength-training program. The goal is to provide the body with enough energy and nutrients—especially protein, carbohydrates, and healthy fats—to support muscle growth and recovery. During a bulk, individuals typically lift heavier weights, progressively increase training volume, and prioritize adequate sleep to maximize muscle gains. While some fat gain is normal due to the calorie surplus, a well-planned bulk aims to minimize excess fat by using clean, nutrient-dense foods and carefully tracking intake and progress.\n''')
-    print("Cutting ?\n")
-    print('''Cutting is a phase focused on reducing body fat while preserving as much muscle mass as possible. It involves consuming fewer calories than the body burns, combined with consistent strength training and often increased cardiovascular activity. Protein intake is kept high to support muscle retention, while carbohydrates and fats are adjusted to maintain energy and hormonal balance. The main challenge during cutting is finding the right calorie deficit—large enough to promote fat loss but small enough to avoid muscle loss, fatigue, or strength decline.\n''')
-    print("To Gain Muscle ?\n")
-    print('''To gain muscle, the body needs a consistent combination of progressive strength training, adequate nutrition, and proper recovery. Resistance training creates small tears in muscle fibers, which then repair and grow stronger when fueled by sufficient calories—especially protein—and carbohydrates for energy. Eating in a slight calorie surplus, training each muscle group regularly, progressively increasing weights or volume, and getting enough sleep are all essential for maximizing muscle growth over time.\n''')
-else :
-    print("So you are aware of the all fitness terms , that's completely fine .")
+# ---------- Functions ----------
 
-# Breathing technique
+def show_terms():
+    output.delete(1.0, tk.END)
+    output.insert(tk.END,
+    "BULKING:\nBulking is eating in a calorie surplus to gain muscle.\n\n"
+    "CUTTING:\nCutting is eating in a calorie deficit to lose fat.\n\n"
+    "GAIN MUSCLE:\nProgressive training + surplus calories + recovery.\n"
+    )
 
-choice_breath = input("Enter yes for Breathing instructions :\n")
-if choice_breath.lower() == "yes":
-    print('''Before any heavy lift (like a squat, deadlift, or heavy press), you must create Intra-Abdominal Pressure (IAP). This is achieved by taking a deep breath and locking your core muscles. This "brace" acts like an internal weight belt, stabilizing the spine.''')
-else :
-    print("ok fine ")
+def diet_weight_gain():
+    output.delete(1.0, tk.END)
+    foods = [
+        "Eggs", "Banana", "Avocado", "Dates", "Rice",
+        "Oats", "Chicken Breast", "Peanut Butter",
+        "Nuts", "Dark Chocolate", "Seeds", "Cheese"
+    ]
+    output.insert(tk.END, "WEIGHT GAIN DIET:\n\n")
+    for food in foods:
+        output.insert(tk.END, f"- {food}\n")
 
-# Diet plan for the customers 
+def diet_weight_loss():
+    output.delete(1.0, tk.END)
+    foods = [
+        "Apple", "Chia Seeds", "Brown Rice", "Broccoli",
+        "Oats", "Green Vegetables", "Greek Yogurt",
+        "Beans", "Avocado", "Cucumber", "Carrot", "Orange"
+    ]
+    output.insert(tk.END, "WEIGHT LOSS DIET:\n\n")
+    for food in foods:
+        output.insert(tk.END, f"- {food}\n")
 
-print("What diet actually is ?\n")
-print("A diet plan is a structured guide that outlines what, when, and how much a person should eat in order to achieve a specific health or fitness goal. It is designed to provide the body with the right amount of calories and nutrients needed for energy, growth, recovery, and overall well-being. A diet plan takes into account factors such as age, body weight, activity level, and goals like muscle gain, fat loss, or maintaining a healthy lifestyle. Rather than being about strict restrictions, an effective diet plan focuses on balanced meals, proper portion sizes, and consistency, helping individuals develop sustainable eating habits that support long-term health and performance.\n")
-print("What is Calories?\n")
-print("Calories are the foundation of weight management and body transformation, as they represent the energy the body uses to function, train, and recover. A calorie surplus occurs when daily intake exceeds energy expenditure, which is necessary for building muscle, improving strength, and supporting recovery from intense workouts because the body requires extra fuel to repair and grow muscle tissue. However, if the surplus is too large or poorly managed, it can also lead to unwanted fat gain. On the other hand, a calorie deficit happens when the body burns more calories than it consumes, prompting it to draw energy from stored fat, which results in weight loss. While a deficit is effective for fat reduction, it must be carefully controlled to preserve muscle mass, maintain strength, and prevent fatigue. By adjusting calorie intake based on goals—using a surplus for muscle growth and a deficit for fat loss—individuals can strategically shape their physique while supporting long-term performance and health.\n")
-print("Benefits of getting a proper diet ?\n")
-print("A healthy diet offers many advantages that support both physical and mental well-being. It helps maintain a healthy body weight by providing the right balance of calories and nutrients, reducing the risk of obesity and related diseases. A proper diet improves energy levels and daily performance by supplying the body with essential vitamins, minerals, and macronutrients. It also supports muscle growth, strength, and recovery, especially when combined with regular physical activity. Additionally, a balanced diet strengthens the immune system, improves digestion, and lowers the risk of chronic conditions such as diabetes, heart disease, and high blood pressure. Over time, following a good diet promotes better focus, improved mood, and long-term overall health.\n")
+def calorie_calculator():
+    try:
+        w = float(weight_entry.get())
+        h = float(height_entry.get())
+        a = int(age_entry.get())
+        calories = 10 * w + 6.25 * h - 5 * a - 161
+        messagebox.showinfo("Calories Required",
+                            f"Daily Calories Needed:\n{round(calories, 2)} kcal")
+    except:
+        messagebox.showerror("Error", "Enter valid numbers")
 
-Requirement = input("What do you want ? (enter just number) \n 1-) Weight gain \n 2-) Weight loss \n 3-) Gain muscle or get into shape \n ")
-print("Here is the Budget friendly Diet plan :")
-if Requirement == "1":
-    print("Alright , so you want to Gain Weight  ")
-    print("Here is the complete diet plan for you")
-    print("What to eat :")
-    print("\t 1-) Eggs \n\t 2-) Banana \n\t 3-) Avagado \n\t 4-) Dates \n\t 5-) Rice \n\t 6-) Oats \n\t 7-) Chicken Breast \n\t 8-) Peanut Butter \n\t 9-) Nuts \n\t 10-) Dark Chocolate \n\t 11-) Seeds \n\t 12-) Cheese\n" )
-elif Requirement == "2":
-    print("Alright , so you want to Loss Weight  ")
-    print("Here is the complete diet plan for you")
-    print("What to eat:")
-    print("\t 1-) Apple \n\t 2-) Chia Seeds \n\t 3-) Brown Rice \n\t 4-) Broccoli \n\t 5-) Oats  \n\t 6-) Green Leaf \n\t 7-)  Green Yogurt  \n\t 8-) Beans \n\t 9-) Avagodo \n\t 10-) Cucumber \n\t 11-) Carrat  \n\t 12-) Orange\n " )
-elif Requirement == "3":
-    print("Alright , so you want to Gain muscle  ")
-    print("Here is the complete diet plan for you")
-    print("What to eat:")
-    print("\t 1-) Chicken Breast \n\t 2-) Milk \n\t 3-) Peanut Butter \n\t 4-) Walnuts \n\t 5-) Oats  \n\t 6-) Almonds \n\t 7-) Black Beans  \n\t 8-) Pasta \n\t 9-) Lean Beef \n\t 10-) Cheese  \n\t 11-) Protein Bar  \n\t 12-) Chickpeas\n " )
-else:
-    print("Please enter between 1 to 3 .")
+def workout_plan():
+    output.delete(1.0, tk.END)
+    output.insert(tk.END,
+    "6 DAY WORKOUT PLAN\n\n"
+    "DAY 1: Chest\n"
+    "- Bench Press\n- Incline DB Press\n- Cable Fly\n\n"
+    "DAY 2: Back\n"
+    "- Pull-ups\n- Barbell Rows\n- Lat Pulldown\n\n"
+    "DAY 3: Shoulders\n"
+    "- Overhead Press\n- Lateral Raises\n\n"
+    "DAY 4: Arms\n"
+    "- Biceps Curls\n- Triceps Pushdown\n\n"
+    "DAY 5: Legs\n"
+    "- Squats\n- Lunges\n- Leg Press\n\n"
+    "DAY 6: Abs\n"
+    "- Crunches\n- Planks\n"
+    )
 
-# Calories 
-choice=input("Enter yes to get the calories of the food (yes or no)\n")
-if choice.lower()=="yes":
-    print("Calories chart of bulk Food (calories , protein)\n")
-    print("\t 1-) Eggs (66k , 12g)\n\t 2-) Banana (121kcal , 1.5g)\n\t 3-) Avagado (320kcal , 4g)\n\t 4-) Dates (200kcal , 1.5g)\n\t 5-) Rice (205kcal , 4g)\n\t 6-) Oats (150 kcal , 5g)\n\t 7-) Chicken Breast (165kcal , 61g)\n\t 8-) Peanut Butter (190kcal ,8g) \n\t 9-) Nuts (170kcal , 90g)\n\t 10-) Dark Chocolate (170kcal , 6g)\n\t 11-) Seeds (170kcal , 2g)\n\t 12-) Cheese (270kcal , 20g)\n" )
-    print("Calories chart of cut Food (calories , protein)\n")
-    print("\t 1-) Apple (62kcal , 1.3g)\n\t 2-) Chia Seeds (60kcal , 1.7g) \n\t 3-) Brown Rice (108kcal ,2.5g) \n\t 4-) Broccoli (31kcal , 2.5g2)\n\t 5-) Oats (150kcal , 5g) \n\t 6-) Green Leaf (15kcal , 1.5g)\n\t 7-)  Green Yogurt (100kcal , 17g) \n\t 8-) Beans (31kcal , 2g)\n\t 9-) Avagodo (80kcal , 1g)\n\t 10-) Cucumber (16kcal 0.7g)\n\t 11-) Carrat (52kcal , 1.2g) \n\t 12-) Orange (62kcal , 1.2g)\n " )
-    print("Calories chart of muscle gain Food (calories , protein)\n")
-    print("\t 1-) Chicken Breast (165kcal , 31g)\n\t 2-) Milk (150kcal , 8g)\n\t 3-) Peanut Butter (95kcal , 5g)\n\t 4-) Walnuts (185kcal ,4g)\n\t 5-) Oats  (150kcal , 5g)\n\t 6-) Almonds (164kcal , 4g)\n\t 7-) Black Beans (114kcal , 8.8g) \n\t 8-) Pasta (76kcal , 8g)\n\t 9-) Lean Beef (250kcal , 26g)\n\t 10-) Cheese (90kcal , 12g) \n\t 11-) Protein Bar (220kcal , 22g) \n\t 12-) Chickpeas (234kcal , 15g)\n " )
-elif choice.lower()=="no":
-    print("ok thats fine .")
+# ---------- UI Components ----------
 
-# Current Weight Check
+title = tk.Label(root, text="🏋️ Awais Fitness Coaching",
+                 font=("Arial", 24, "bold"),
+                 fg="white", bg="#1e1e1e")
+title.pack(pady=10)
 
-current_weight = int(input("Enter you current weight here in kgs :\n"))
-if current_weight >= 100:
-    print("you are over weight you need to loss weight \n")
-elif current_weight <= 60:
-    print("you are under weight you need to gain weight \n")
-else:
-    print("your weight is considered as modrate weight \n")
+button_frame = tk.Frame(root, bg="#1e1e1e")
+button_frame.pack(pady=10)
 
-# Calories required
+tk.Button(button_frame, text="Fitness Terms", width=20, command=show_terms).grid(row=0, column=0, padx=5)
+tk.Button(button_frame, text="Diet: Weight Gain", width=20, command=diet_weight_gain).grid(row=0, column=1, padx=5)
+tk.Button(button_frame, text="Diet: Weight Loss", width=20, command=diet_weight_loss).grid(row=0, column=2, padx=5)
+tk.Button(button_frame, text="Workout Plan", width=20, command=workout_plan).grid(row=0, column=3, padx=5)
 
-print("Please Enter the required information here to calculate the required calories for you ?\n")
-weight = float(input("Enter your weight in kgs : \n"))
-height = float(input("Enter your height in cms : \n"))
-age = int(input("Enter your age: \n"))
-cal = 10 * weight + 6.25 * height - 5 * age - 161
-print(f"{cal} Calories required on {weight}kgs Weight and {height}cms height at the age {age} years .\n")
-# note that this is the minimum calories required according to yourself
+# ---------- Calorie Calculator ----------
+calc_frame = tk.Frame(root, bg="#1e1e1e")
+calc_frame.pack(pady=10)
 
-# Workout plan
+tk.Label(calc_frame, text="Weight (kg)", fg="white", bg="#1e1e1e").grid(row=0, column=0)
+weight_entry = tk.Entry(calc_frame, width=10)
+weight_entry.grid(row=0, column=1)
 
-choice_workout = input("You are Disable? : (yes or no )\n").lower()
-if choice_workout == "no":
-    print("Complete body workout\n")
-    print("DAY 1 : Chest:")
-    print("\n\tBarbell Bench Press - 4*8-10\n\tIncline Dumbbell Press - 3*10-12\n\tDumbbell Flyes - 3*12-15\n\tChest Dips - 3*10-12\n\tCable Fly - 3*12-15\n\tPush-Up Finisher - 2*20\n")
-    print("DAY 2 : Back:")
-    print("\n\tPull-Ups - 4*6-10\n\tBent-Over Barbell Rows - 4*8-10\n\tLat Pulldown (Wide Grip) - 3*10-12\n\tSeated Cable Row - 3*10-12Single-Arm Dumbbell Row - 3*10-12\n\tHyperextensions - 3*12-15\n\tStraight-Arm Cable Pulldown (Finisher) - 2*12\n")
-    print("DAY 3 : Shoulders:")
-    print("\n\tOverhead Barbell Press - 4*8-10\n\tDumbbell Shoulder Press - 3*10-12\n\tLateral Raises - 3*12-15\n\tFront Raises - 3*12-15\n\tRear Delt Flyes (Dumbbell or Machine) - 3*12-15\n\tFace Pulls - 3*12-15\n\tDumbbell or Barbell Shrugs - 3*12-15\n")
-    print("DAY 4 : Biceps and Triceps:") 
-    print("\n\tBarbell Curls - 4*8-10\n\tAlternating Dumbbell Curls - 3*10-12\n\tHammer Curls - 3*10-12\n\tPreacher Curls - 3*10-12\n\tCable Curl - 3*12-15\n\tClose-Grip Bench Press - 4*8-10\n\tOverhead Dumbbell Extension - 3*10-12\n\tTricep Dips - 3*12-15\n\tCable Rope Pushdowns - 3*12-15\n\tSkull Crushers - 3*10-12\n\tDiamond Push-Ups - 2*12-15\n")
-    print("DAY 5 : Legs:")
-    print("\n\tBack Squats - 4*8-10\n\tRomanian Deadlifts - 3*10-12\n\tLeg Press - 3*12-15\n\tWalking Lunges - 3*12 each leg\n\tLeg Extensions - 3*12-15\n\tLeg Curls - 3*12-15\n\tCalf Raises - 4*15-20\n")
-    print("DAY 6 : Abs:") 
-    print("\n\tCrunches - 3*20\n\tLeg Raises - 3*12-15\n\tRussian Twists - 3*20\n\tPlank - 3*45-60 sec\n\tBicycle Crunches - 3*20\n\tCable Crunch - 3*12-15\n")
+tk.Label(calc_frame, text="Height (cm)", fg="white", bg="#1e1e1e").grid(row=0, column=2)
+height_entry = tk.Entry(calc_frame, width=10)
+height_entry.grid(row=0, column=3)
 
-elif choice_workout == "yes" :
+tk.Label(calc_frame, text="Age", fg="white", bg="#1e1e1e").grid(row=0, column=4)
+age_entry = tk.Entry(calc_frame, width=10)
+age_entry.grid(row=0, column=5)
 
-    print("Disable / Special person's workout\n")
-    print("Lower Body Disablity:")
-    print("\n\tSeated push-ups (using chair arms)\n\tResistance band chest press\n\tResistance band rows\n\tBicep curls\n\tShoulder press\n\tTricep dips (chair or parallel bars\n")        
-    print("Upper Body Disablity:")
-    print("\n\tLeg presses (machine or band)\n\tSeated or lying leg extensions\n\tSeated leg curls (band)\n\tGlute bridges\n\tWall sits\n\tStanding supports with rails/walker\n")
-    print("Full Body Limited Mobility:")
-    print("\n\tLight resistance band movements\n\tIsometric squeezes (contract muscles without moving joints)\n\tWall-assisted standing\n\tSeated leg extensions\n\tSupported arm raises\n")
-    print("One Sided Disablity:")
-    print("\n\tStrengthen the functional side to support mobility\n\tSeated unilateral exercises (one-arm presses, curls, rows)\n")
-    print("Back Injury and Limited Spinal Mobility:")
-    print("\n\tGlute bridges\n\tBird dog (modified)\n\tWall sits\n\tSeated band rows\n")
+tk.Button(calc_frame, text="Calculate Calories",
+          command=calorie_calculator).grid(row=0, column=6, padx=10)
 
-# List of strength training machines with movement instruction instructions
-for_machines=input("Enter something to know about the machine used for weight training ( yes or no )\n")
-if for_machines.lower()=="yes":
-    machines = [
-        "Chest Press:\t Push handles forward to build chest.",
-        "Lat Pulldown:\t Pull bar to chest for back.",
-        "Seated Row:\t Pull handles toward waist for posture.",
-        "Shoulder Press:\t Push weight overhead for strong shoulders.",
-        "Pec Deck:\t Squeeze arms together to isolate chest.",
-        "Bicep Curl Machine:\t Curl handles up to build arms.",
-        "Tricep Extension:\t Push lever down to tone arms.",
-        "Leg Press:\t Push platform away using your legs.",
-        "Leg Extension:\t Kick legs straight to work quads.",
-        "Seated Leg Curl:\t Pull heels down for hamstrings.",
-        "Adductor Machine:\t Squeeze legs together for inner thighs.",
-        "Abductor Machine:\t Push legs apart for outer glutes.",
-        "Calf Raise:\t Press toes down to build calves.",
-        "Assisted Pull-Up:\t Uses weights to help you lift.",
-        "Smith Machine:\t Guided barbell for safe squatting.",
-        "Captain’s Chair:\t Lift knees to work lower abs.",
-        "Back Extension:\t Lean forward and up for back.\n"
-]
-elif for_machines.lower()=="no":
-    print("that's completely fine.")
-for machine in machines:
-    print(machine)
+# ---------- Output Area ----------
+output = scrolledtext.ScrolledText(root, width=100, height=20)
+output.pack(pady=10)
 
-# Personal Trainer
-
-choice_trainer = input("Do you need a personal trainer? (yes/no):\n ").lower()
-if choice_trainer == "yes":
-    trainers = {
-        "Sir Ali": "Available timing: 6am to 12pm",
-        "Sir Ahad": "Available timing: 12pm to 6pm",
-        "Sir Hammad": "Available timing: 6pm to 12am",
-        "Sir Ammad": "Available timing: 12am to 6am"
-    }
-    print("\nAvailable Trainers:\n")
-    for trainer, timing in trainers.items():
-        print(f"{trainer} → {timing}")
-elif choice_trainer == "no":
-    print("No problem! You can manage on your own.")
-else:
-    print("Invalid input. Please enter 'yes' or 'no'.")
-
-# Gym Consistency
-
-days = int(input("\nEnter a days did you hit the gym this week ?\n"))
-if days < 0 or days > 7:
-    print("Please enter a valid number between 0 and 7.")
-elif days < 4:
-    print("Avoid cheap dopamine and chase the real one .")
-elif days > 4:
-    print("You overcame distractions and got addicted to real dopamine .")
-else:
-    print("Good job! You're consistent. Keep pushing.")
-
-# Heart Beat Rate
-
-Beats = int(input("\nEnter the number of beats you counted manully to count blood rate? \n"))
-time_for_beats = float(input("enter time in seconds you counted : \n"))
-BPM = Beats * (60 / time_for_beats)
-print("your pulse rate in BPM :", BPM)
-if BPM > 60 and BPM < 100:
-    print("your heartbeat is normal \n")
-elif BPM > 50 and BPM < 60:
-    print("low but still normal \n")
-elif BPM < 50 :
-    print("you are much in resting position and did not started workout yet .\n")
-elif BPM > 100 :
-    print("your heart beat high than usual.\n")
-
-# Hydration
-
-liter = int(input("Enter number of liters you drink a day : \n"))
-if liter > 4 :
-    print("Your are consuming nice amount of water\n ")
-elif liter < 4 :
-    print("Your need more water to stay hydrated\n ")
-elif liter == 4 :
-    print("Good for today \n")
-
-# Injury Avoider
-wants_tips = input("Enter yes if you want some tips ( yes or no )?\n").lower()
-
-if wants_tips == "yes":
-    tips = {
-        "Warm-up:": "Do 5-10 minutes of light movement (walking, jogging). \nAdd dynamic stretches (arm circles, leg swings).\n",
-        "Use proper technique:": "Learn the correct form for exercises or sports.\nDon't rush movements.\nAsk a coach or use mirrors/videos if unsure.\n",
-        "Increase gradually:": "Follow the 10% rule: don't increase intensity, weight, or duration by more than 10% per week.\nAvoid sudden changes.\n",
-        "Strengthen supporting muscle:": "Core exercises.\nBalance training.\nFlexibility work.\n",
-        "Rest and Recovery:": "Take rest days.\nGet enough sleep (7-9 hours).\nMuscles grow and repair during rest.\n",
-        "Eat well:": "Eat enough protein, carbs, and vitamins to support recovery.\n",
-        "listen to your body:": "Stop if you feel:\t\nSharp pain.\t\nDizziness.\t\nSevere fatigue.\nPain is a warning sign, not something to push through.\n",
-        "Check-up if needed:": "Physiotherapist.\nDoctor.\nSports trainer.\n"
-    }
-    for key, value in tips.items():
-        print("\n", key)
-        print(value)
-elif wants_tips == "no":
-    print("it's ok if you do not want tips for fitness industry")
-
-# FAQs
-
-choice_faq = input("Enter something here to get answers of the questions that are generally asked by newbies ( yes or no ):\n").lower()
-
-if choice_faq == "yes":
-    # Python dictionary of 100 Fitness FAQs with concise answers
-    fitness_faq = {
-        "Getting Started": [
-            "How do I start? Start with walking and bodyweight moves.",
-            "Gym or home? Both work; consistency is what matters.",
-            "How many days? Three days per week is ideal.",
-            "Best time to workout? Whenever you can stay most consistent.",
-            "Workout duration? Thirty to sixty minutes is plenty.",
-            "Staying motivated? Focus on habits, not just results.",
-            "Cardio or weights first? Lift weights first for maximum energy.",
-            "What to wear? Comfortable, breathable athletic clothing and shoes.",
-            "Gym anxiety? Remember, everyone is focused on themselves.",
-            "Fit by walking? Yes, walking is excellent for health."
-        ],
-        "Weight Loss": [
-            "Lose belly fat? Burn more calories than you consume.",
-            "Spot reduce? You cannot choose where fat leaves.",
-            "Gaining weight? You might be gaining muscle mass.",
-            "Calories for loss? Eat 200-500 below your maintenance.",
-            "Calorie deficit? Consuming fewer calories than you burn.",
-            "Weigh daily? No, weekly averages are more accurate.",
-            "Weight loss plateau? Increase intensity or slightly drop calories.",
-            "Fat into muscle? No, they are different tissue types.",
-            "Fasted cardio? It works, but isn't strictly necessary.",
-            "Safe weight loss? One to two pounds per week."
-        ],
-        "Strength Training": [
-            "Will lifting bulk me? No, bulking requires a massive surplus.",
-            "How heavy? Heavy enough to challenge your muscles.",
-            "Reps and sets? Reps are counts, sets are groups.",
-            "Progressive overload? Gradually increasing weight or reps weekly.",
-            "Correct form? Record yourself or hire a trainer.",
-            "Compound exercises? Moves using multiple joints and muscles.",
-            "Machines or weights? Both are effective for building strength.",
-            "Training frequency? Hit each muscle twice per week.",
-            "What is DOMS? Normal muscle soreness after new exercise.",
-            "Soreness and working out? Yes, light movement helps recovery speed."
-        ],
-        "Cardio & Endurance": [
-            "Best cardio? The one you actually enjoy doing.",
-            "What is HIIT? Short bursts of high intensity exercise.",
-            "Cardio length? Twenty to forty minutes is sufficient.",
-            "Cardio every day? Yes, if intensity is kept moderate.",
-            "Increase stamina? Gradually increase your distance and pace.",
-            "Elliptical or treadmill? Elliptical is easier on your joints.",
-            "Zone 2 training? Steady cardio at a conversational pace.",
-            "Cardio kill gains? Only if done in extreme excess.",
-            "Proper breathing? Inhale through nose, exhale through mouth.",
-            "Is swimming good? Yes, it is great full-body cardio."
-        ],
-        "Nutrition": [
-            "Track macros? Helpful but not strictly necessary initially.",
-            "Pre-workout meal? Focus on easily digestible complex carbs.",
-            "Post-workout meal? Combine protein with some healthy carbohydrates.",
-            "Protein needs? Aim for one gram per pound.",
-            "Are carbs bad? No, carbs provide essential workout energy.",
-            "Eat junk food? Occasionally, if it fits your calories.",
-            "Water intake? Drink half your weight in ounces.",
-            "Intermittent fasting? A tool for managing calorie intake.",
-            "Eat after 8PM? Timing matters less than total calories.",
-            "Meal prep? Yes, it helps prevent poor choices."
-        ],
-        "Supplements": [
-            "Protein powder? Useful for hitting daily protein goals.",
-            "What is Creatine? Improves strength and muscle water retention.",
-            "Pre-workout safe? Generally, but monitor your caffeine intake.",
-            "BCAAs worth it? Usually unnecessary with enough dietary protein.",
-            "Multivitamins? Good for filling small nutritional gaps.",
-            "Fat burners? Mostly ineffective; focus on your diet.",
-            "Protein shake timing? Anytime throughout the day is fine.",
-            "Whey vs Plant? Both build muscle; choose your preference.",
-            "Need electrolytes? Yes, especially during long, sweaty sessions.",
-            "Regulated supplements? Not strictly; choose reputable, tested brands."
-        ],
-        "Recovery": [
-            "Sleep amount? Seven to nine hours is ideal.",
-            "Need to stretch? Yes, to maintain healthy joint mobility.",
-            "Stretch timing? Dynamic before, static stretches after workout.",
-            "Active recovery? Low intensity movement like light walking.",
-            "Back pain? Focus on core and proper form.",
-            "Sharp pain? Stop immediately and rest the area.",
-            "Foam rollers? Great for relieving tight muscle tension.",
-            "Rest days? Take one to two days weekly.",
-            "Work out sick? Rest if symptoms are below neck.",
-            "Massage help? Yes, it improves blood flow/recovery."
-        ],
-        "Equipment": [
-            "Best shoes? Flat for lifting, cushioned for running.",
-            "Fitness tracker? Helpful for data, but not mandatory.",
-            "Lifting belts? Only necessary for very heavy loads.",
-            "Home gym needs? Dumbbells and a bench are enough.",
-            "Resistance bands? Excellent for travel and joint health.",
-            "Lifting straps? Helpful when grip strength fails first.",
-            "Waist trainers? They do not burn body fat.",
-            "Best apps? MyFitnessPal, Strava, or Strong app.",
-            "Personal trainer? Great for learning form and accountability.",
-            "Yoga mat? Yes, for floor work and stretching."
-        ],
-        "Specific Goals": [
-            "Get six-pack? Low body fat reveals abdominal muscles.",
-            "Seniors starting? Focus on balance and functional strength.",
-            "Period exercise? Yes, light exercise can reduce cramps.",
-            "How to tone? Build muscle and lose body fat.",
-            "Desk job workouts? Prioritize hip mobility and posture moves.",
-            "Improve flexibility? Consistent stretching and full-range movements.",
-            "Better posture? Strengthen your back and core muscles.",
-            "Work out pregnant? Yes, but consult your doctor first.",
-            "Build glutes? Heavy squats, lunges, and hip thrusts.",
-            "Arm flab? Strength train arms and lose fat."
-        ],
-        "Mindset": [
-            "Miss a workout? Don't worry, just resume tomorrow.",
-            "See changes? Usually within four to eight weeks.",
-            "Weight up? Likely water retention or muscle growth.",
-            "Listen to podcasts? Yes, if it keeps you moving.",
-            "Sweat vs Fat? Sweat is cooling, not fat loss.",
-            "Realistic goals? Aim for small, weekly habit changes.",
-            "Mind-muscle connection? Focus on the muscle you're working.",
-            "Detox/Cleanse? Unnecessary; your liver handles detoxification.",
-            "Alone or partner? Choose whatever keeps you most consistent.",
-            "Success factor? Consistency is the most important factor."
-        ]
-    }
-    for category, questions in fitness_faq.items():
-        print(f"\n\t\t\t\t\t\t {category}\n")
-        for i, question in enumerate(questions, 1):
-            print(f"{i}. {question}")
-else:
-    print("So you do not want to know about the basic terms, that's fine.")
-
-# sleep hours of the customer for complete muscle growth 
-
-hours_sleep= int(input("\nEnter hours of sleep to know that your body is healing ?\n"))
-if hours_sleep>= 8:
-    print("your muscles are healing well")
-elif hours_sleep>= 6 and hours_sleep<8:
-    print("your muscles are healing slowly")
-elif hours_sleep<6 :
-    print("not enough sleep for muscle recovery , need to sleep more")
-else:
-    print("Enter correctly how many hours did you sleep ") 
-
-# number of steps customer or user walked on a day 
-
-steps=int(input("\nEnter number of steps you walked on a day :\n"))
-if steps >= 10000:
-    print("Enough steps for today")
-elif steps >= 80000 and steps < 10000 :
-    print("you should walk about 1500 steps more to achieve 10,000 steps")
-elif steps >= 6000 and steps < 8000 :
-    print("your need to walk about 2500 to 3500 steps to achieve 10,000 steps ")
-elif steps >= 4000 and steps < 6000 :
-    print("your need to walk 4500 to 5500 steps to achieve target of 10,000 steps ")
-elif steps < 4000 :
-    print("you should walk near about 6500 or more steps to achieve 10,000 steps ")
-else:
-    print("Enter correctly the number of steps did you move ")
-
-# Body fat esmtimator
-
-body_fat = float(input("\nEnter your body fat percentage: \n"))
-
-if body_fat < 6:
-    print("Essential fat on your body (good fat)")
-elif body_fat < 14:
-    print("Good fat percentage for athletes")
-elif body_fat < 25:
-    print("Normal fat percentage")
-elif body_fat > 24:
-    print("Above average ")
+# ---------- Run ----------
+root.mainloop()
