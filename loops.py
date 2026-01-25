@@ -11,8 +11,11 @@ for i in range(1,11):
     mul=1
     mul=i*mul
     print("7*", i,"=",mul)
+
+
 for i in range(0,11):
     print(i)
+    
 fruits=["apple"," banana"," cherry"]
 for x in fruits:
     print(x)
@@ -81,3 +84,4 @@ print(list)
 
 
     
+
