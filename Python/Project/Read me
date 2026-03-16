@@ -1,0 +1,103 @@
+📌 Project Overview
+
+Awais Fitness Coaching is designed to help beginners and fitness enthusiasts by offering:
+
+Fitness education (bulking, cutting, muscle gain)
+
+Budget-friendly diet plans
+
+Calorie requirement calculator
+
+Structured workout routines
+
+Health monitoring (heart rate, hydration, sleep, steps)
+
+Injury prevention tips
+
+Beginner fitness FAQs
+
+Inclusive workouts for disabled users
+
+The project originally started as a console-based application and was later converted into a GUI-based desktop app for better usability and user experience.
+
+🖥️ GUI Features
+
+🎯 User-friendly interface (Tkinter)
+
+🧠 Fitness terms & education
+
+🥗 Weight gain / loss / muscle gain diet plans
+
+🔢 Daily calorie calculator
+
+🏋️‍♂️ Full workout plans (6-day split)
+
+🫀 Heartbeat & health status evaluation
+
+💧 Hydration & sleep analysis
+
+🤕 Injury prevention tips
+
+❓ 100+ beginner fitness FAQs
+
+♿ Special workout plans for disabled users
+
+📊 Scrollable output panel for clean display
+
+🛠️ Technologies Used
+
+Python 3
+
+Tkinter (GUI framework)
+
+Standard Python libraries only (no external dependencies)
+
+📂 Project Structure
+awais-fitness-coaching/
+│
+├── awais_fitness_gui.py
+├── README.md
+
+▶️ How to Run the Project
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/awais-fitness-coaching.git
+
+2️⃣ Navigate to the Project Folder
+cd awais-fitness-coaching
+
+3️⃣ Run the Application
+python awais_fitness_gui.py
+
+
+✅ Make sure Python 3 is installed on your system.
+
+🧮 Calorie Calculation Formula
+
+The app uses the Mifflin-St Jeor Equation:
+
+Calories = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161
+
+
+This estimates minimum daily calorie needs.
+
+⚠️ Disclaimer
+
+This application is for educational and general fitness guidance only.
+
+It does not replace professional medical or fitness advice.
+
+Always consult a doctor or certified trainer for medical conditions.
+
+🚀 Future Enhancements
+
+🔥 Modern UI (CustomTkinter / PyQt)
+
+📱 Mobile-friendly version
+
+💾 Save user profiles
+
+📈 Progress tracking graphs
+
+📦 Convert to .exe desktop application
+
+🌐 Web-based version
