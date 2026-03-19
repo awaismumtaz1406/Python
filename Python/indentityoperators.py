@@ -44,3 +44,35 @@ if x is None:
 def func(val):
     if val is None:
         return "No input"
+    
+
+
+def bud(vaal):
+    if vaal is None: 
+         return "no output"
+    
+
+
+a = 5
+b = 5
+
+print(a is b)  # True
+
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a is b)  # False
+
+a = [1, 2, 3]
+b=a
+print(a is b)  # True
+print(a == b)  # True
+
+a = 5
+b = 5
+print(id(a), id(b))  # Same
+
+x = [1,2,3]
+y = [1,2,3]
+print(id(x), id(y))  # Different
