@@ -27,9 +27,16 @@
 
 # l=int(input("enter name:"))
 
-a=()
-a=(1,)
-a=(1,2,7)
-print(a)
+# a=()
+# a=(1,)
+# a=(1,2,7)
+# print(a)
 
 
+
+awa='123'
+type(awa)
+n=int(awa)
+print(type(n))
+# print(awa)
+print(type(awa))
