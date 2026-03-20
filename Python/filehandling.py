@@ -26,17 +26,13 @@
 
 
 
-# # read from file
-# f=open("C:/Users/LAPTOP LEGENDS/Pictures/python/Python/test.txt", "r")
-# print(f.read())
-# f.close()
+# read from file
+f=open("C:/Users/LAPTOP LEGENDS/Pictures/python/Python/test.txt", "r")
+print(f.read())
+f.close()
 
 
-a = [1, 2, 3]
-b = [1, 2, 3]
 
-print(a == b)   # True (values same)
-print(a is b)   # False (different objects)
 
 
 
