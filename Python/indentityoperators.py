@@ -46,7 +46,6 @@
 #         return "No input"
     
 
-
 # def bud(vaal):
 #     if vaal is None: 
 #          return "no output"
