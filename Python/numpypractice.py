@@ -12,12 +12,47 @@
 # print(arr1)
 
 
-import numpy as a
-list1=a.arange(1,8)
-print(list1)
+# import numpy as np
+# list=[1,2,3,4,5,33,22,111,44,556,67,77]
+# arr=np.array(list).reshape(3,4)
+# print(arr)
+
+# import numpy as a
+# list1=a.arange(1,8)
+# print(list1)
+
+
+# row and column
+# import numpy as a
+# list1=a.arange(21,27).reshape(3,2)
+# print(list1)
+
+
+# import numpy as a
+# list1=a.zeros((1,8))
+# print(list1)
+
+
+# import numpy as a
+# list1=a.zeros((4,2))
+# print(list1)
 
 
 
+# import numpy as a
+# list1=a.ones((4,2))
+# print(list1)
+
+
+
+import numpy as np
+
+a = np.array([21, 22])
+b = np.array([23, 24])
+c = np.array([25, 26])
+
+reult=np.array  ([a,b,c])
+print(reult)
 
 
 
