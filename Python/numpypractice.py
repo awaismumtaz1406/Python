@@ -6,9 +6,14 @@
 # 1d array
 
 
-# import numpy as a
-# list1=[[10,20,30],[40,50,60],[70,80,90]]
-# arr1=a.array(list1)
+import numpy as a
+list1=[[10,20,30],[40,50,60],[70,80,90]]
+arr1=a.array(list1)
+print(arr1.ndim)
+print(arr1.shape)
+print(arr1.size)
+print(arr1.dtype)
+print(arr1.itemsize)
 # print(arr1)
 
 
@@ -45,14 +50,15 @@
 
 
 
-import numpy as np
+# import numpy as np
 
-a = np.array([21, 22])
-b = np.array([23, 24])
-c = np.array([25, 26])
+# a = np.array([21, 22])
+# b = np.array([23, 24])
+# c = np.array([25, 26])
 
-reult=np.array  ([a,b,c])
-print(reult)
+# result=np.array  (a)
+# result.ndim
+# print(result)
 
 
 
