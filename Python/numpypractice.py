@@ -12,7 +12,7 @@ arr1=a.array(list1)
 print(arr1.ndim)
 print(arr1.shape)
 print(arr1.size)
-print(arr1.dtype)
+print(arr1([1]).dtype)
 print(arr1.itemsize)
 # print(arr1)
 
