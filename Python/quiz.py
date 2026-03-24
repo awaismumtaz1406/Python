@@ -28,9 +28,23 @@
 
 # print(unique)             
 
-
+def getmarks(x):
+  return x[1]
 
 tuple=((1,10), (2,20), (3,30),(4,40),(5,50),(8,60), (9,70))
 # for i in range(0,len(tuple)-1):
-high=max(tuple,a=lambda x:x[1])
-print(high)
+res=max(tuple,key=lambda x:x[1])
+print(res)
+
+
+
+
+
+
+
+
+
+
+
+
+
