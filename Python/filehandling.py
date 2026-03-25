@@ -27,9 +27,16 @@
 
 
 # read from file
-f=open("C:/Users/LAPTOP LEGENDS/Pictures/python/Python/test.txt", "r")
+f=open("C:/Users/LAPTOP LEGENDS/Pictures/python/Python/test.txt", "a")
+f.write("ptyhebjabj kjdwq qwejkf kjeba")
 print(f.read())
 f.close()
+
+
+
+
+
+
 
 
 
