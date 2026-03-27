@@ -16,6 +16,7 @@
 # x = [10, 20]
 # y = [10, 20]
 
+
 # print(x == y)  # True (values are the same)
 # print(x is y)  # False (x and y are different objects in memory)
 # print(x is not y)  # True (x and y are different objects in memory)
