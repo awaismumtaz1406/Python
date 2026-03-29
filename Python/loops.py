@@ -1,16 +1,16 @@
 sum = 0
 for i in range(1,51):
-
     sum =sum+  i
-
 print(sum)
+
 var="python"
 # for i in var:
 #     print(i)
 for i in range(1,11):
     mul=1
     mul=i*mul
-    print("7*", i,"=",mul)
+print("7*", i,"=",mul)
+
 
 
 for i in range(0,11):

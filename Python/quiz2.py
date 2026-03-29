@@ -39,7 +39,6 @@ print(math.sqrt(x**2+y**2))
 
 
 
-
 points = ((3,4), (5,12), (8,15))
 for x,y in points:
     print(math.sqrt(x**2+y**2))
@@ -56,4 +55,15 @@ total = A | B
 print("Common:", common)
 print("Unique:", unique)
 print("Total:", total)
+
+
+
+
+
+
+
+
+
+
+
 
