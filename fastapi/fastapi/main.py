@@ -2,22 +2,22 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 
-app = FastAPI()
+app= FastAPI()
 
 class Tea(BaseModel):
-    id: int
+    id: int 
     name: str
     origin: str
-
-teas: List[Tea] = []
-
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Tea API!"}
-
-@app.get("/teas")
-def read_teas():
-    return teas
+    
+    teas: List[Tea] = []
+    
+    @appp.get("/")
+    def read_root():
+        return {"message": "Welcome to the Tea API!"}   
+    
+    @app.get("/teas")
+    def read_teas():
+        return teas()
   
     
     
