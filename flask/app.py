@@ -19,7 +19,7 @@ def create_app():
         "experience": "Passionate developer with 2 years of experience building web apps using Flask and Django."
     }
 
-    # ---------------- ROUTES ---------------- #
+    # ----------------python app.py ROUTES ---------------- #
 
     @app.route('/')
     def home():
