@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Ali Khan",
+    "age": 25,
+    "gender": "Male",
+    "disease": "Fever",
+    "admitted": true
+  },
+  {
+    "id": 2,
+    "name": "Sara Ahmed",
+    "age": 31,
+    "gender": "Female",
+    "disease": "Diabetes",
+    "admitted": false
+  },
+  {
+    "id": 3,
+    "name": "Usman Tariq",
+    "age": 45,
+    "gender": "Male",
+    "disease": "Hypertension",
+    "admitted": true
+  },
+  {
+    "id": 4,
+    "name": "Ayesha Noor",
+    "age": 19,
+    "gender": "Female",
+    "disease": "Asthma",
+    "admitted": false
+  },
+  {
+    "id": 5,
+    "name": "Hamza Malik",
+    "age": 52,
+    "gender": "Male",
+    "disease": "Heart Disease",
+    "admitted": true
+  }
+]
+

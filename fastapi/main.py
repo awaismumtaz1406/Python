@@ -11,7 +11,7 @@ class Tea(BaseModel):
     
 teas: List[Tea] = []
     
-@appp.get("/")  
+@app.get("/")  
 def read_root():
     return {"message": "Welcome to the Tea API!"}   
     
