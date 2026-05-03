@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "patient_id": 1,
     "name": "Ali Khan",
     "age": 25,
     "gender": "Male",
@@ -8,7 +8,7 @@
     "admitted": true
   },
   {
-    "id": 2,
+    "patient_id": 2,
     "name": "Sara Ahmed",
     "age": 31,
     "gender": "Female",
@@ -16,7 +16,7 @@
     "admitted": false
   },
   {
-    "id": 3,
+    "patient_id": 3,
     "name": "Usman Tariq",
     "age": 45,
     "gender": "Male",
@@ -24,7 +24,7 @@
     "admitted": true
   },
   {
-    "id": 4,
+    "patient_id": 4,
     "name": "Ayesha Noor",
     "age": 19,
     "gender": "Female",
@@ -32,7 +32,7 @@
     "admitted": false
   },
   {
-    "id": 5,
+    "patient_id": 5,
     "name": "Hamza Malik",
     "age": 52,
     "gender": "Male",
