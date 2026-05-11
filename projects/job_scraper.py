@@ -102,3 +102,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+// requirements.txt
+requests==2.33.1
+beautifulsoup4==4.14.3
+
+
+
+
+
+
